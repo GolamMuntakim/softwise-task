@@ -3,14 +3,14 @@ const body = document.querySelector('body')
 const head = document.querySelector('head')
 const foot = document.createElement('div')
 const conatiner = body.appendChild(foot)
-conatiner.className='container'
+conatiner.className = 'container'
 conatiner.innerText = 'SALE ALERT: 30% off sitewide | Code : MEMORIAL - 20% Off Fine | Code: FINE20'
 conatiner.style.textAlign = 'center'
 conatiner.style.color = 'white'
 conatiner.style.backgroundColor = 'black'
 conatiner.style.padding = '10px'
-body.style.padding ='0px'
-body.style.margin ='0px'
+body.style.padding = '0px'
+body.style.margin = '0px'
 
 // nav bar
 const navDiv = document.createElement('div')
@@ -45,25 +45,120 @@ nav.innerHTML = `
    </div>
            
             `
-            nav.style.padding = '10px'
-            nav.style.backgroundColor = 'white'; 
-            
-            const navBar = navDiv.appendChild(nav);
-            body.appendChild(navBar);
+nav.style.padding = '10px'
+nav.style.backgroundColor = 'white';
 
-            // image
+const navBar = navDiv.appendChild(nav);
+body.appendChild(navBar);
 
-            // CSS for mobile screen responsiveness
-            const style = document.createElement('style');
-            style.innerHTML = `
+// image
+const imgDiv = document.createElement('div')
+imgDiv.className = 'img-div'
+imgDiv.innerHTML = `
+           <div class='item-img'>
+           <div style='width:70px'>
+           <a href="https://jamesmichelle.com/products/jaws-necklace-1"> <img style='background-color:rgb(241,238,239); height:80px; border-radius:50%' src="https://storage.googleapis.com/abtest-img-bucket/jmp-9.2-sub-category-images/best-sellers.png" /></a>
+           <a href="https://jamesmichelle.com/products/jaws-necklace-1"> <p style='text-align:center'>Best Seller</p></a>
+           </div>
+            <div style='width:70px'>
+              <a href="https://jamesmichelle.com/products/starfish-necklace">
+            <img style='background-color:rgb(241,238,239);height:80px; border-radius:50%' src="https://storage.googleapis.com/abtest-img-bucket/jmp-9.2-sub-category-images/new.png" />
+            </a>
+              <a href="https://jamesmichelle.com/products/starfish-necklace">
+            <p style='text-align:center'>New</p>
+            </a>
+             </div>
+              <div style='width:70px'>
+               <a href="https://jamesmichelle.com/products/luna-moon-necklace">
+            <img style='background-color:rgb(241,238,239);height:80px; border-radius:50%' src="https://storage.googleapis.com/abtest-img-bucket/jmp-9.2-sub-category-images/necklaces.png" />
+            </a>
+             <a href="https://jamesmichelle.com/products/luna-moon-necklace">
+             <p style='text-align:center'>Necklaces</p>
+             </a>
+             </div>
+                <div style='width:70px'>
+                 <a href="https://jamesmichelle.com/products/abyss-ring">
+            <img style='background-color:rgb(241,238,239);height:80px; border-radius:50%' src="https://storage.googleapis.com/abtest-img-bucket/jmp-9.2-sub-category-images/rings.png" />
+            </a>
+              <a href="https://jamesmichelle.com/products/abyss-ring">
+             <p style='text-align:center'>Rings</p>
+             </a>
+             </div>
+               <div style='width:70px'>
+                 <a href="https://jamesmichelle.com/products/shell-collector-necklace">
+            <img style='background-color:rgb(241,238,239);height:80px; border-radius:50%' src="https://storage.googleapis.com/abtest-img-bucket/jmp-9.2-sub-category-images/bracelets.png" />
+            </a>
+               <a href="https://jamesmichelle.com/products/shell-collector-necklace">
+              <p style='text-align:center'>Earrings</p>
+              </a>
+             </div>
+             <div style='width:70px'>
+              <a href="https://jamesmichelle.com/products/favorite-quote-ring">
+            <img style='background-color:rgb(241,238,239);height:80px; border-radius:50%' src="https://storage.googleapis.com/abtest-img-bucket/jmp-9.2-sub-category-images/personalized.png" />
+            </a>
+             <a href="https://jamesmichelle.com/products/favorite-quote-ring">
+             <p style='text-align:center'>Braceles</p>
+             </a>
+             </div>
+               <div style='width:70px'>
+                 <a href="https://jamesmichelle.com/products/seafolly-charm-necklace">
+            <img style='background-color:rgb(241,238,239);height:80px; border-radius:50%' src="https://storage.googleapis.com/abtest-img-bucket/jmp-9.2-sub-category-images/fine.png" />
+            </a>
+             <a href="https://jamesmichelle.com/products/seafolly-charm-necklace">
+            <p style='text-align:center'>personalized</p>
+            </a>
+             </div>
+                <div style='width:70px'>
+                <a href="https://jamesmichelle.com/products/reef-charm-necklace">
+            <img style='background-color:rgb(241,238,239);height:80px; border-radius:50%' src="https://storage.googleapis.com/abtest-img-bucket/jmp-9.2-sub-category-images/clearance.png" />
+            </a>
+            <a href="https://jamesmichelle.com/products/reef-charm-necklace">
+             <p style='text-align:center'>Fine</p>
+             </a>
+             </div>
+           </div>
+            `
+body.appendChild(imgDiv);
+
+// card
+const cardDiv = document.createElement('div')
+cardDiv.className = 'card-div'
+cardDiv.innerHTML = `
+<div class='card'>
+ <div class='card-container' style=''>
+        <a href="https://jamesmichelle.com/products/luna-moon-necklace">    <img style='background-color:rgb(241,238,239);height:300px; width:300px' src="https://storage.googleapis.com/abtest-img-bucket/jmp-9.2-sub-category-images/necklaces.png" /></a>
+            <a href="https://jamesmichelle.com/products/luna-moon-necklace">
+             <p style='text-align:center; text-decoration:none ; color:black'>Necklaces</p></a>
+             </div>
+ <div class='card-container'>
+         <a href="https://jamesmichelle.com/products/initial-ring">
+            <img style='background-color:rgb(241,238,239);height:300px; width:300px' src="https://storage.googleapis.com/abtest-img-bucket/jmp-9.2-sub-category-images/bracelets.png" />
+         </a>
+             <a href="https://jamesmichelle.com/products/initial-ring"><p style='text-align:center'>Earrings</p></a>
+             </div>
+ <div class='card-container'>
+          <a href="https://jamesmichelle.com/products/tablet-ring">  <img style='background-color:rgb(241,238,239);height:300px;width:300px ' src="https://storage.googleapis.com/abtest-img-bucket/jmp-9.2-sub-category-images/rings.png" /></a>
+            <a href="https://jamesmichelle.com/products/tablet-ring"> <p style='text-align:center'>Rings</p></a>
+             </div>
+</div>
+`
+body.appendChild(cardDiv);
+
+
+// CSS for mobile screen responsiveness
+const style = document.createElement('style');
+style.innerHTML = `
             body {
-                width: 100%; /* Default width */
+                width: 100%;
+                 height:2000px;
+                    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
             }
         
             @media (min-width: 769px) {
                 body {
                     width: 100%; /* Width for desktop screens */
                     margin: 0 auto; /* Center the body content */
+                   
                 }
                 .container {
                     width: 1260px; /* Container width for desktop */
@@ -78,6 +173,23 @@ nav.innerHTML = `
                     .menu{
                      visibility: hidden;
                     }
+                     .item-img{
+                   display:flex ;
+                    gap:40px; 
+                    justify-content:center
+                     }
+                    .card{
+                    display:flex; 
+                    gap:100px ;
+                     justify-content:center;
+                     margin-top:40px
+                    }
+                     .card-container{
+                     width:250px}
+                      a {
+                text-decoration: none;
+                color: inherit;
+            }
             }
         
             @media (max-width: 768px) {
@@ -97,11 +209,38 @@ nav.innerHTML = `
             width: 180px  
         }
             .cart{
-           height:60px
+           height:60px;
             }
                 .container {
-                    width: 180%; /* Container width for mobile */
+                    width: 190%; /* Container width for mobile */
                 }
+                    .item-img{
+                    overflow-x: scroll;
+                   display:flex;
+                   gap:50px;
+                   width:800px;
+                  padding: 10px; 
+                    }
+                     .item-img img {
+        height: auto; /* Maintains aspect ratio */
+    }
+         .card{
+                   overflow-x: scroll;
+                    display:flex; 
+                    gap:120px ;
+                    width:800px;
+                     justify-content:center;
+                     margin-x:80px
+                    padding-left: 20px; 
+                    }
+                     .card-container{
+                     width:190px
+                   
+                     }
+                      a {
+                text-decoration: none;
+                color: inherit;
+            }
             }
         `;
 head.appendChild(style);
